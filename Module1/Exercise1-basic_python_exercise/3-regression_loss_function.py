@@ -2,7 +2,7 @@ import math
 import random as r
 
 # mean absolute error
-def MAE(targets, predicts, num_samples):
+def mae(targets, predicts, num_samples):
     total_loss = 0
     for i in range(num_samples):
         loss = abs(targets[i] - predicts[i])
@@ -12,7 +12,7 @@ def MAE(targets, predicts, num_samples):
     print(f"final MAE: {final_loss}")
 
 # mean squared error
-def MSE(targets, predicts, num_samples):
+def mse(targets, predicts, num_samples):
     total_loss = 0
     for i in range(num_samples):
         loss = (targets[i] - predicts[i]) ** 2
@@ -22,7 +22,7 @@ def MSE(targets, predicts, num_samples):
     print(f"final MSE: {final_loss}")
 
 #root mean squared error
-def RMSE(targets, predicts, num_samples):
+def rmse(targets, predicts, num_samples):
     total_loss = 0
     for i in range(num_samples):
         loss = (targets[i] - predicts[i]) ** 2
@@ -45,11 +45,11 @@ if __name__ == '__main__':
             predicts.append(predict)
 
         if loss_name == 'MAE':
-            MAE(targets, predicts, num_samples)
+            mae(targets, predicts, num_samples)
         elif loss_name == 'MSE':
-            MSE(targets, predicts, num_samples)
+            mse(targets, predicts, num_samples)
         else:
-            RMSE(targets, predicts, num_samples)
+            rmse(targets, predicts, num_samples)
     else:
         print('number of samples must be an integer number')
     
