@@ -1,9 +1,9 @@
 def calc_f1_score(tp, fp, fn):
-    if type(tp) != int:
+    if type(tp) is not int:
         return 'tp must be int'
-    if type(fp) != int:
+    if type(fp) is not int:
         return 'fp must be int'
-    if type(fn) != int:
+    if type(fn) is not int:
         return 'fn must be int'
     if tp <= 0 or fp <= 0 or fn <= 0:
         return 'tp and fp and fn must be greater than zero'
