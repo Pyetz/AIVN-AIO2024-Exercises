@@ -1,4 +1,4 @@
-def Levenshtein_distance(source, target):
+def levenshtein_distance(source, target):
     M = len(source) + 1
     N = len(target) + 1
     D = [[None for _ in range(N)] for _ in range(M)]
@@ -21,8 +21,8 @@ def Levenshtein_distance(source, target):
 if __name__ == "__main__":
     source = "you"
     target = "yu"
-    print(Levenshtein_distance(source, target))
+    print(levenshtein_distance(source, target))
 
     source = "kitten"
     target = "sitting"
-    print(Levenshtein_distance(source, target))
+    print(levenshtein_distance(source, target))
